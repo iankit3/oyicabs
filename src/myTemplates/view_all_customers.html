@@ -1,0 +1,41 @@
+
+<div class="col-md-12 loader" [hidden]="!showLoader">
+         <img src="./build/images/loader.gif" alt="loading">
+</div>
+<div *ngIf="showpopup==true" class="popup-outer">
+   <div>   
+        <ul style="list-style:none">
+            <li> Name: {{selectedCust.name}}</li>
+            <li>Number: {{selectedCust.phone}}</li>
+            <li>Gender: {{selectedCust.gender}}</li>
+            <li>Email; {{selectedCust.email}}</li>
+            <li>Phone: {{selectedCust.phone}}</li>
+            <li>RideCount: {{selectedCust.rideCount}}</li>
+           <button type="button" (click)="delCust(selectedCust.uid)" >Disable</button>
+        </ul>  
+   </div>
+    <span (click)="showpopup=false" class="popup-close">X</span>
+</div>
+<div class="col-md-12">
+    <table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <!--<th>Gender</th>
+            <th>Email</th>-->
+            <th>Phone</th>
+            <!--<th>Ride Count</th>-->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of rows" (click)="selectedCust = item;showpopup=true">
+            <td>{{item.name}}</td>
+            <!--<td>{{item.gender}}</td>
+            <td>{{item.email}}</td>-->
+            <td>{{item.phone}}</td>
+            <!--<td>{{item.rideCount}}</td>-->
+        </tr>
+    </tbody>
+</table>
+
+</div>

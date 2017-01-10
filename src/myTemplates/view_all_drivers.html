@@ -1,0 +1,53 @@
+<div class="col-md-12 loader" [hidden]="!showLoader">
+         <img src="./build/images/loader.gif" alt="loading">
+</div>
+<div *ngIf="showpopup==true" class="popup-outer">
+   <div>   
+        <ul style="list-style:none">
+           <li> Name: {{selectedDriver.name}}</li>
+           <li>Number: {{selectedDriver.phone}}</li>
+           <li>vehicle Type: {{selectedDriver.vehicleType}}</li>
+            <li>Allowed Passenger: {{selectedDriver.allowedPassenger}}</li>
+            <li>Email: {{selectedDriver.email}}</li>
+            <li>Gender: {{selectedDriver.gender}}</li>
+            <li>Vehicle Info: {{selectedDriver.vehicleInfo}}</li>
+            <li>Vehicle License: {{selectedDriver.vehicleLicense}}</li>
+            <li>Vehicle Registration: {{selectedDriver.vehicleRegistration}}</li>
+
+           <button type="button" (click)="delDriver(selectedDriver.uid)" >Disable</button>
+        </ul>  
+   </div>
+    <span (click)="showpopup=false" class="popup-close">X</span>
+</div>
+
+<div class="col-md-12">
+    <table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <!--<th>Allowed Passenger</th>
+            <th>Email</th>
+            <th>Gender</th>-->
+            <th>Name</th>
+            <th>Phone</th>
+            <!--<th>Vehicle Info</th>
+            <th>Vehicle License</th>
+            <th>Vehicle Registration</th>-->
+            <th>Vehicle Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of rows" (click)="selectedDriver = item;showpopup=true">
+            <!--<td>{{item.allowedPassenger}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.gender}}</td>-->
+            <td>{{item.name}}</td>
+            <td>{{item.phone}}</td>
+            <!--<td>{{item.vehicleInfo}}</td>
+            <td>{{item.vehicleLicense}}</td>
+            <td>{{item.vehicleRegistration}}</td>-->
+            <td>{{item.vehicleType}}</td>
+        </tr>
+    </tbody>
+</table>
+
+</div>

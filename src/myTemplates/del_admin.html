@@ -1,0 +1,24 @@
+<div class="col-sm-12 col-md-12">
+    <div class="block-flat">
+        <div class="header">
+            <h3>Delete Admin</h3>
+        </div>
+        <div class="content">
+            <div class="form-group col-md-12 ">
+                <form parsley-validate novalidate>
+                    <div class="form-group col-md-4 setmyheight">
+                        <label class="control-label">Delete Existing Admin </label>
+                        <select name="del_admin" class="form-control" [(ngModel)]="model.selected_admin_uid">
+                           <option value=""></option>
+                           <option value="{{i.uid}}" *ngFor="let i of rows">{{i.name}} ({{i.email}})</option>
+                        </select>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="col-lg-12">
+                        <button (click)="delAdmin()" class="btn btn-primary" type="button">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+     <div class="col-md-2 sidebar" style="padding:0">
+        <ul class="brand_logo">
+                   Oyicabs
+               </ul>
+               <ul class="client_logo">
+                   Dashboard
+               </ul>
+                  <ul class="nav nav-sidebar">
+                      <li><a href="#" [ngClass]="{'active':selectedTab == 1}" (click)="selectedTab=1" routerLink="/booknewtaxi"><i class="fa fa-taxi"></i> <span>Book New cab</span></a></li>
+                      <li><a href="#" [ngClass]="{'active':selectedTab == 2}" (click)="selectedTab=2" routerLink="/adddriver"><i class="fa fa-home"></i> <span>Add New Driver / Vehicle</span></a></li>
+                      <li><a href="#" [ngClass]="{'active':selectedTab == 3}" (click)="selectedTab=3" routerLink="/viewallcustomers"><i class="fa fa-bell"></i> <span>View Registered Customers</span></a></li>
+                      <li><a href="#" [ngClass]="{'active':selectedTab == 4}" (click)="selectedTab=4" routerLink="/viewalldrivers"><i class="fa fa-bars "></i> <span>View Registered Drivers</span></a></li>
+                      <li><a href="#" [ngClass]="{'active':selectedTab == 5}" *ngIf="isAdmin" (click)="selectedTab=5" routerLink="/deldriver"><i class="fa fa-trash-o"></i> <span>Delete Driver</span></a></li>
+                      <li><a href="#" [ngClass]="{'active':selectedTab == 6}" (click)="selectedTab=6" routerLink="/trackdrivers"><i class="fa fa-car"></i> <span>Track Driver</span></a></li>
+                      <li><a href="#" [ngClass]="{'active':selectedTab == 7}" (click)="selectedTab=7" routerLink="/displayallrides"><i class="fa fa-home"></i> <span>Display All Rides</span></a></li>
+                      <li><a href="#" [ngClass]="{'active':selectedTab == 8}" *ngIf="isAdmin" (click)="selectedTab=8" routerLink="/addnewadmin"><i class="fa fa-user"></i> <span>Add New Admin </span></a></li>
+                      <li><a href="#" [ngClass]="{'active':selectedTab == 9}" *ngIf="isAdmin" (click)="selectedTab=9" routerLink="/deladmin"><i class="fa fa-trash-o"></i> <span>Delete Admin </span></a></li>
+                  </ul>
+      </div>
+    
+    <div class="col-md-10" style="padding:0;">
+     <nav class="navbar navbar-default main-top">
+       <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a (click)="handleLogout()" id="logout" >Logout</a></li>
+           </ul>
+           </li> 
+       </ul>
+     </nav>
+     <div class="col-md-12 main">
+       <router-outlet></router-outlet>
+     </div>
+    </div>

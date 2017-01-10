@@ -1,0 +1,59 @@
+<div class="col-sm-12 col-md-12">
+    <div class="block-flat">
+        <div class="header">
+            <h3>Book New Cab / Vehicle </h3>
+        </div>
+        <div class="content">
+            <div class="form-group col-md-12 ">
+                <form (ngSubmit)="onSubmit()" #newtaxi="ngForm">
+                    <div class="form-group col-md-3 setmyheight">
+                        <label>Payment Mode</label>
+                        <input type="text" name="paymentmode" parsley-trigger="change" value="Cash" placeholder="Cash" class="form-control" readonly>
+                    </div>
+                    <div class="form-group col-md-3 setmyheight">
+                        <label>Drop Location</label>
+                        <div class="input-sugg">
+                            <ul  class="sugg-ul">
+                               <li class="sugg-li" *ngFor="let i of drop_sugg" 
+                                 (click)="model.dloc=i.description;drop_sugg=[]" >
+                                {{i.description}}</li>
+                            </ul>
+                        </div>
+                        <input id="dloc" (keyup)="updateDropLoc($event)" [(ngModel)]="model.dloc" type="text" name="dloc" parsley-trigger="change"
+                            placeholder="" class="form-control">
+                    </div>
+                    <div class="form-group col-md-3 setmyheight">
+                        <label>Pickup Location</label>
+                        <div class="input-sugg">
+                            <ul class="sugg-ul">
+                                <li class="sugg-li" *ngFor="let i of pick_sugg" 
+                                 (click)="model.ploc=i.description;pick_sugg=[]" >
+                                {{i.description}}</li>
+                            </ul>
+                        </div> 
+                        <input id="ploc" (keyup)="updatePickLoc($event)" [(ngModel)]="model.ploc" type="text" name="ploc" parsley-trigger="change"
+                            placeholder="" class="form-control">
+                    </div>
+                    <div class="form-group col-md-3 setmyheight">
+                        <label>Phone Number</label>    
+                        <input  [(ngModel)]="model.phone" type="text" name="phone" parsley-trigger="change"
+                            placeholder="Enter your 10 digit phone number" class="form-control">
+                    </div>
+                    <div class="form-group col-md-3 setmyheight">
+                        <label>Vehicle Type (Auto/Cab/Shuttle)</label>
+                        <select [(ngModel)]="model.vehicle_type" name="select" class="form-control" style="margin-top:0.8em">
+                            <option value="auto">Auto</option>
+                            <option value="cab" selected>Cab</option>
+                            <option value="shuttle">Shuttle</option>
+                         </select>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="form-group col-md-12 ">
+                        <button class="btn btn-primary" type="submit" (click)="newTaxi();">Submit</button>
+                        <button class="btn btn-default">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

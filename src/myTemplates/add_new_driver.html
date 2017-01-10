@@ -1,0 +1,74 @@
+<div class="col-sm-12 col-md-12">
+  <div class="block-flat">
+    <div class="header">
+      <h3>Add New Driver / Vehicle </h3>
+    </div>
+    <div class="content">
+      <div class="form-group col-md-12 ">
+
+        <form (ngSubmit)="onSubmit()" #addnewdriverForm="ngForm">
+          <div class="form-group col-md-3 setmyheight">
+            <label>Driver Name</label>
+            <input type="text" name="name" [(ngModel)]="model.name" placeholder="" class="form-control">
+          </div>
+          <div class="form-group col-md-3 setmyheight">
+            <label>Contact Number</label>
+            <input type="text" name="phone" [(ngModel)]="model.phone" placeholder="" class="form-control">
+          </div>
+          <div class="form-group col-md-3 setmyheight">
+            <label>Gender</label>
+              <select class="form-control" id="sel1" name="gender" [(ngModel)]="model.gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="others">Others</option>
+              </select>
+          </div>
+          <div class="form-group col-md-3 setmyheight">
+            <label>Email</label>
+            <input type="email" name="email" [(ngModel)]="model.email" placeholder="" class="form-control">
+          </div>
+          <div class="form-group col-md-3 setmyheight">
+            <label>Vehicle Info</label>
+            <input type="text" name="vehicle_info" [(ngModel)]="model.vehicle_info"  placeholder="" class="form-control">
+          </div>
+          <div class="form-group col-md-3 setmyheight">
+            <label>Vehicle Type</label>
+            <select [(ngModel)]="model.vehicle_type" name="vehical_type" class="form-control" style="margin-top:0.8em">
+              <option value="auto">Auto</option>
+              <option value="cab" selected>Cab</option>
+              <option value="shuttle">Shuttle</option>
+            </select>
+          </div>
+          <div class="form-group col-md-3 setmyheight">
+            <label>Allowed Passenger</label>
+            <input type="number" name="allowed_passenger" [(ngModel)]="model.allowed_passenger" placeholder="" class="form-control">
+          </div>
+          <div class="form-group col-md-3 setmyheight">
+            <label>Vehicle Registration No</label>
+            <input type="text" name="vehicle_registration" [(ngModel)]="model.vehicle_registration"  placeholder="" class="form-control">
+          </div>
+          <div class="form-group col-md-3 setmyheight">
+            <label>Licence No</label>
+            <input type="text" name="vehicle_license"   [(ngModel)]="model.vehicle_license" placeholder="" class="form-control">
+          </div>
+          <div class="form-group col-md-3 setmyheight">
+            <label>Rate per km</label>
+            <input type="text" name="rate" [(ngModel)]="model.rate" placeholder="" class="form-control">
+          </div>
+          <div class="form-group col-md-3 setmyheight">
+            <label>Login Password</label>
+            <input type="password" name="password" [(ngModel)]="model.password"  placeholder="" class="form-control">
+          </div>
+          
+
+          <div class="clear"></div>
+          <div class="form-group col-md-12 ">
+            <button (click)="newDriver();" class="btn btn-primary" type="submit">Submit</button>
+            <button class="btn btn-default">Cancel</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

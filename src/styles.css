@@ -1,0 +1,226 @@
+/* You can add global styles to this file, and also import other style files */
+
+label {
+    color: #000;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.sidebar {
+    padding-top: 1em;
+    background: #2B333D;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.brand_logo {
+    /*height: 100px;*/
+    padding: 0.3em 0;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    background: #24272D;
+}
+
+.client_logo {
+    height: 4em;
+    background: #fff;
+    width: 82%;
+    margin: auto;
+    font-size: 1.8em;
+    line-height: 4em;
+    margin-bottom: 1.4em;
+}
+
+
+/*.nav.nav-sidebar{
+ 
+}*/
+
+.nav>li>a {
+    font-size: 1.1em;
+    color: #fff;
+    padding: 10px 1.2em;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none;
+    background-color: #24272D;
+}
+
+a>.glyphicon {
+    margin-right: 1.2em;
+}
+
+.main-top {
+    border-bottom: 1px solid grey;
+    padding: 0.6em 0;
+}
+
+.top-right {
+    float: right;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: right;
+}
+
+.top-right>span {
+    margin-right: 1em;
+}
+
+.top-left {
+    float: left;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.main-bottom {
+    margin: 1em;
+    padding: 0.6em 0;
+}
+
+.main-content {
+    background: #eee;
+    /*color: #222;*/
+    padding: 0.6em 1.2em;
+}
+
+.content-header {
+    font-size: 1.3em;
+}
+
+.form-set {
+    background: #fff;
+    padding: 0.8em 0;
+    margin-top: 1.2em;
+}
+
+.form-group>input {
+    margin-top: 0.8em;
+    font-size: 1em;
+}
+
+.form-left {
+    padding-right: 4em;
+    border-right: 1px dashed lightgrey;
+}
+
+.form-right {
+    padding-left: 4em;
+}
+
+.drop-zone {
+    /* border: 1px dashed #222; */
+    padding: 1.2em;
+    /* width: 19%; */
+    text-align: center;
+    font-size: 1.3em;
+    /* box-shadow: 0 0 8px 2px lightgray; */
+}
+
+label.radio-inline {
+    margin-right: 1em;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.mynav {
+    background: #2B333D;
+    border: none;
+    border-radius: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.input-sugg {
+    position: absolute;
+    top: 70px;
+    /*background: red;*/
+    width: 88%;
+    border-radius: 5px;
+    margin: auto;
+    color: #222;
+    height: 0;
+}
+
+.sugg-ul {
+    list-style: none;
+    padding: .2em;
+    z-index: 1;
+}
+
+.sugg-li {
+    background: #eee;
+    padding: 1px 4px;
+    border-bottom: 1px solid lightgrey;
+    border-top: 0;
+}
+
+.popup-outer {
+    background: rgba(43, 51, 61, 0.9);
+    padding: 2em 2.2em;
+    color: #fff;
+    font-size: 1.6em;
+    position: absolute;
+    width: 50%;
+    margin-left: 24%;
+    z-index: 2;
+}
+
+.popup-outer .popup-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: #eee;
+    color: #222;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 1.6em;
+    font-size: 1em;
+    text-shadow: 0 0 2px #3f4750;
+}
+
+.nav.nav-sidebar li a.active {
+    background: rgba(103, 58, 183, 0.59);
+}
+
+.loader {
+    top: 250px;
+    position: absolute;
+    z-index: 2;
+    left: 40%;
+}
+
+.main{
+    height: calc(100vh - 60px);
+    max-height: calc(100vh - 60px);
+    overflow-y: scroll;
+
+}

@@ -1,0 +1,33 @@
+<div class="col-md-12 loader" [hidden]="!showLoader">
+         <img src="./build/images/loader.gif" alt="loading">
+</div>
+<div class="col-md-12">
+    <table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Customer Phone</th>
+            <th>Driver Name</th>
+            <th>Driver Phone</th>
+            <th>Ride Distance</th>
+            <th>Ride ETA</th>
+            <th>Status</th>
+            <!--<th>Vehicle Type</th>-->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of rows">
+            <td>{{item.customerName}}</td>
+            <td>{{item.customerPhone}}</td>
+            <td>{{item.driverName}}</td>
+
+            <td>{{item.driverPhone}}</td>
+            <td>{{item.rideDistance}}</td>
+            <td>{{item.rideETA}}</td>
+            <td>{{item.status}}</td>
+            <!--<td>{{item.vehicleType}}</td>-->
+        </tr>
+    </tbody>
+</table>
+
+</div>

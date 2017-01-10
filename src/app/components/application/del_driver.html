@@ -1,0 +1,67 @@
+<div class="col-sm-12 col-md-12">
+<div class="block-flat">
+    <div class="header">
+        <h3>Delete Driver</h3>
+    </div>
+
+    <div class="content">
+        <div class="form-group col-md-12 ">
+            <form parsley-validate novalidate>
+                <div class="form-group col-md-4 setmyheight">
+                    <label class="control-label">Delete Existing Driver </label>
+                 <select name="del_driver" class="form-control" [(ngModel)]="model.selected_driver_uid">
+                    <option value=""></option>
+                    <option value="{{i.uid}}" *ngFor="let i of rows">{{i.name}} ({{i.email}})</option>        
+                  </select>
+                </div>
+                <div class="clear"></div>
+                <div class="col-lg-12">
+                    <button  (click)="delDriver()" class="btn btn-primary" type="button">Delete</button>
+                </div>
+            </form>
+
+
+
+        </div>
+
+    </div>
+</div>
+    <style type="text/css">
+    #color-switcher{
+      position:fixed;
+      background:#272930;
+      padding:10px;
+      top:50%;
+      right:0;
+      margin-right:-109px;
+    }
+    
+    #color-switcher .toggle{
+      cursor:pointer;
+      font-size:15px;
+      color: #FFF;
+      display:block;
+      position:absolute;
+      padding:4px 10px;
+      background:#272930;
+      width:25px;
+      height:30px;
+      left:-24px;
+      top:22px;
+    }
+    
+    #color-switcher p{color: rgba(255, 255, 255, 0.6);font-size:12px;margin-bottom:3px;}
+    #color-switcher .palette{padding:1px;}
+    #color-switcher .color{width:15px;height:15px;display:inline-block;cursor:pointer;}
+    #color-switcher .color.purple{background:#7761A7;}
+    #color-switcher .color.green{background:#19B698;}
+    #color-switcher .color.red{background:#EA6153;}
+    #color-switcher .color.blue{background:#54ADE9;}
+    #color-switcher .color.orange{background:#FB7849;}
+    #color-switcher .color.prusia{background:#476077;}
+    #color-switcher .color.yellow{background:#fec35d;}
+    #color-switcher .color.pink{background:#ea6c9c;}
+    #color-switcher .color.brown{background:#9d6835;}
+    #color-switcher .color.gray{background:#afb5b8;}
+ </style>
+</div>
