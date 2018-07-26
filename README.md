@@ -1,6 +1,6 @@
 # Oyicabs
-## Live at [(http://oyicabs.surge.sh/](http://oyicabs.surge.sh/)
- [Click](http://oyicabs.surge.sh/)
+## Live at [(http://oyicabs.surge.sh/](http://oyicab.surge.sh/)
+ 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 ## Development server
